@@ -3,7 +3,7 @@ print(
 This is my first program
 """)
 x=input('Please Enter:')
-if [x-x%1<1] and [(x%1)!=0]:
+if int(x)!=x:
  print ('This is a float')
 elif [int(x)==x]:
  print ('This is an integer')
