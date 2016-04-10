@@ -3,9 +3,5 @@ print(
 This is my first program
 """)
 x=input('Please Enter:')
-if int(x)!=x:
- print ('This is a float')
-elif [int(x)==x]:
- print ('This is an integer')
-else:
- print ('This is a string')
+print{['{} is a float'.format(x),
+ 'This is an integer'][bool('int(x)-x')]}
