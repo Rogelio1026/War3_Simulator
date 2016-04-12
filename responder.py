@@ -2,11 +2,12 @@ print(
 """I'm Yuhao Zheng
 This is my first program
 """)
-x=input('Please Enter:')
+x=raw_input('Please Enter:')
 try:
- if int(x)!=x:
+ y=float(x)
+ if y%1>0:
   print ('This is a float')
- elif [int(x)==x]:
+ else:
   print ('This is an integer')
-except:
+except ValueError, e:
  print ('This is a string')
