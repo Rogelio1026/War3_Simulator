@@ -1,5 +1,5 @@
 import unittest
-from Humans_peasant import Humans_Peasant
+from War3_simulator import Humans_Peasant
 class TestStringMethods(unittest.TestCase):
 
     def test_creat_Humans_Peasant(self):
