@@ -1,16 +1,13 @@
-class Humans:
-    def __init__(self, hp, armor, id):
-        self.hp = hp
-        self.armor = armor
-        self.id = id
-        self.current_hp = hp
+Key = ['max_hp', 'armor', 'attack', 'armor_type', 'attack_type', 'can_move', 'speed',
+       'can_attack', 'hp_regenration_rate', 'attack_range', 'food']
+
+class Unit:
+    def __init__(self, Key):
+        self.Key = Key
+
     def under_attecked(self, damage):
         self.current_hp = self.current_hp - damage
 
-class Humans_Peasant(Humans):
-    def creat_Humans_Peasant(self, hp=220, armor=0, id=1):
-        id=+1
-        print('You creat a Humans Peasant')
 
 
 
