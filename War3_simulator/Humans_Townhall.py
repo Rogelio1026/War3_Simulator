@@ -1,5 +1,4 @@
-from Building import Building
-import uuid
-class HumansTownhall(Building):
+from Unit import Unit
+class HumansTownhall(Unit):
     def __init__(self):
-        Building.__init__(self, hp=1500, armor=5, some_random_uuid = uuid.uuid4())
+        Unit.__init__(self, 1500, 0)
