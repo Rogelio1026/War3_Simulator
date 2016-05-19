@@ -1,5 +1,7 @@
 from Unit import Unit
-import uuid
-class HumansPeasant(Unit):
+from Attack import NormalAttack
+
+class Peasant(Unit,NormalAttack):
     def __init__(self):
-        Unit.__init__(self, hp=220, armor=0, some_random_uuid = uuid.uuid4())
+        NormalAttack.__init__(self)
+        Unit.__init__(self, 220, 10)
