@@ -1,19 +1,27 @@
 import uuid
+import time
 class Unit:
-    def __init__(self, max_hp, attack):
+    def __init__(self, max_hp, attack, hp_regenration_rate = 1, hp_regenrate = True):
         self.name = uuid.uuid4()
         self.max_hp = max_hp
         self.damage = attack
         self.current_hp = max_hp
+        self.hp_regenration_rate = hp_regenration_rate
+        self.hp_regenrate = hp_regenrate
+
 
     def underattacked(self, damage):
         self.current_hp = self.current_hp - damage
         if self.current_hp < 0:
             self.current_hp = 0
-
+        if self.hp_regenrate:
+            while self.current_hp < self.max_hp:
+                time.sleep(1)
+                self.current_hp = self.current_hp + self.hp_regenration_rate
+                if self.current_hp > self.max_hp:
+                    self.current_hp = self.max_hp
     def alive(self):
         return self.current_hp > 0
-
 
 class PierceAttack:
     def __init__(self):
