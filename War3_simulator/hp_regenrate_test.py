@@ -5,8 +5,8 @@ class TestStringMethods(unittest.TestCase):
     def test_under_attacked(self):
         peasant = Peasant()
         self.assertEqual(peasant.max_hp,220)
-        self.assertEqual(peasant.hp_regenrate,True)
-        self.assertEqual(peasant.hp_regenration_rate,1)
+        self.assertEqual(peasant.hp_regenerate,True)
+        self.assertEqual(peasant.hp_regeneration_rate,1)
         peasant.underattacked(100)
         self.assertEqual(peasant.current_hp, 120)
         time.sleep(1)

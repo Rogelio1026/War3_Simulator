@@ -1,13 +1,13 @@
 import uuid
 import time
 class Unit:
-    def __init__(self, max_hp, attack, hp_regenration_rate = 1, hp_regenrate = True):
+    def __init__(self, max_hp, attack, hp_regeneration_rate = 1, hp_regenerate = True):
         self.name = uuid.uuid4()
         self.max_hp = max_hp
         self.damage = attack
         self.current_hp = max_hp
-        self.hp_regenration_rate = hp_regenration_rate
-        self.hp_regenrate = hp_regenrate
+        self.hp_regeneration_rate = hp_regeneration_rate
+        self.hp_regenerate = hp_regenerate
 
 
     def underattacked(self, damage):
