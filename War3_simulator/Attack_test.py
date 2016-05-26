@@ -9,7 +9,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(peasant.armor_type, 'light')
         self.assertEqual(peasant.attack,5.5)
         peasant.underattacked(10, 'pierce')
-        print(peasant.damage_change)
+        print(peasant.damage_change,2 - 0.94 ** peasant.armor)
         self.assertEqual(peasant.current_hp, 200)
         self.assertEqual(peasant.alive(), True)
         peasant.underattacked(250, 'hero')
