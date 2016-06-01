@@ -1,4 +1,5 @@
 import uuid
+from clock import Game
 
 armortype = {'light': 0, 'medium': 1, 'heavy': 2, 'fortified': 3, 'hero': 4, 'unarmored': 5}
 normal_attack = (1, 1.5, 1, .7, 1, 1)
@@ -13,7 +14,7 @@ attack_type = {'normal': normal_attack, 'pierce': pierce_attack, 'siege': siege_
 
 
 class Unit:
-    def __init__(self, max_hp=1, attack=0, armor_type='unarmored', armor=0, hp_regeneration_rate=1, hp_regenerate=True):
+    def __init__(self, max_hp=1, attack=0, armor_type='unarmored', armor=0, hp_regeneration_rate=24, hp_regenerate=True):
         self.name = uuid.uuid4()
         self.max_hp = max_hp
         self.attack = attack
@@ -60,11 +61,15 @@ class Unit:
         else:
             return 2 - 0.94 ** armor
 
-    def hpregenerate(self):
+    def hpRegenerate(self):
+        """
+
+        :return:current_hp
+        """
+        game = Game()
         if self.hp_regenerate:
-            while self.current_hp < self.max_hp:
-                self.current_hp = self.current_hp + self.hp_regenration_rate
-                if self.current_hp > self.max_hp:
+             self.current_hp = self.current_hp + self.hp_regeneration_rate / game.fps
+             if self.current_hp > self.max_hp:
                     self.current_hp = self.max_hp
 
     def alive(self):
@@ -77,9 +82,16 @@ class Unit:
         """
         pass
 
-    def tick(self, fps):
+    def tick(self):
         """
         This function is called whenever time changed
         :return:
         """
-        self.hpregenerate()
+        Unit.hpRegenerate(self)
+
+
+if __name__ == '__main__':
+    unit = Unit()
+    game = Game()
+    print(game.fps)
+    unit.tick()
