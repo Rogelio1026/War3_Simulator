@@ -8,6 +8,7 @@
           <option value="Humans_Peasant" />
           <option value="War3_simulator.test.Humans_peasant_test.Humans_peasant" />
           <option value="War3_simulator.test.Humans_peasant_test.War3_simulator" />
+          <option value="War3_simulator.library.compareDoubles" />
         </list>
       </option>
     </inspection_tool>

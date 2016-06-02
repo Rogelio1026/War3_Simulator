@@ -1,7 +1,7 @@
 from Unit import Unit
 class Building(Unit):
     def __init__(self):
-        Unit.__init__(self, 1500, 0, 'fortified', 0, False)
+        Unit.__init__(self, attack=0, armor_type='fortified')
 
     def build(self):
         pass

@@ -14,15 +14,15 @@ attack_type = {'normal': normal_attack, 'pierce': pierce_attack, 'siege': siege_
 
 
 class Unit:
-    def __init__(self, max_hp=1, attack=0, armor_type='unarmored', armor=0, hp_regeneration_rate=24, hp_regenerate=True):
+    def __init__(self, max_hp=1, attack=0, attack_type = 'normal', armor_type='unarmored', armor=0, hp_regeneration_rate=1):
         self.name = uuid.uuid4()
         self.max_hp = max_hp
         self.attack = attack
+        self.attack_type = attack_type
         self.armor_type = armor_type
         self.armor = armor
         self.current_hp = max_hp
         self.hp_regeneration_rate = hp_regeneration_rate
-        self.hp_regenerate = hp_regenerate
 
     def underattacked(self, damage, underattack_type):
         """
@@ -34,8 +34,12 @@ class Unit:
         damage_change = Unit.damage_change_lookup(underattack_type,self.armor_type)
         damage_soak = Unit.damage_soak(self.armor)
         self.current_hp = self.current_hp - damage * damage_change * damage_soak
-        if self.current_hp < 0:
+        if self.current_hp <= 0:
             self.current_hp = 0
+            Unit.alive(self)
+
+    def canRegenerateHp(self):
+        return 0 < self.current_hp and self.current_hp < self.max_hp
 
     @staticmethod
     def damage_change_lookup(underattack_type, armor_type):
@@ -61,37 +65,33 @@ class Unit:
         else:
             return 2 - 0.94 ** armor
 
-    def hpRegenerate(self):
+    def hpRegenerate(self,fps):
         """
 
         :return:current_hp
         """
-        game = Game()
-        if self.hp_regenerate:
-             self.current_hp = self.current_hp + self.hp_regeneration_rate / game.fps
+        if self.canRegenerateHp():
+             self.current_hp = self.current_hp + self.hp_regeneration_rate / fps
              if self.current_hp > self.max_hp:
                     self.current_hp = self.max_hp
 
     def alive(self):
         return self.current_hp > 0
 
-    def attack(self):
+    def attack(self, enemy):
         """
-        1.find enemy 2.get location 3.unit.move 4.enemy.underattack
-        :return:
-        """
-        pass
 
-    def tick(self):
+        :param enemy: Unit
+        :return: function
+        """
+        enemy.underattacked(self.attack, self.attack_type)
+
+    def tick(self,fps):
         """
         This function is called whenever time changed
-        :return:
+        :return: function
         """
-        Unit.hpRegenerate(self)
+        self.hpRegenerate(fps)
 
-
-if __name__ == '__main__':
-    unit = Unit()
-    game = Game()
-    print(game.fps)
-    unit.tick()
+    def __call__(self, *args, **kwargs):
+        return 1

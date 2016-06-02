@@ -1,5 +1,6 @@
 from Building import Building
-class HumansTownhall(Building):
+from Unit import Unit
+class HumansTownhall(Unit):
     def __init__(self):
-        self.max_hp = 1500
-        Building.__init__(self)
+        Unit.__init__(self,1500)
+        # Building.__init__(self)
