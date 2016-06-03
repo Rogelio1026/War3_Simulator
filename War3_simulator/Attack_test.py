@@ -21,9 +21,8 @@ class TestStringMethods(unittest.TestCase):
         peasant = Peasant()
         peon = Peon()
         self.assertEqual(peon.current_hp, 250)
-        print(callable(peon))
         peasant.attack(peon)
-        self.assertEqual(peon.current_hp, 1494.75)
+        self.assertEqual(peon.current_hp, 244.75)
         while peon.current_hp > 0:
             peon.underattacked(peasant.attack, peasant.attack_type)
         self.assertEqual(peon.alive(), False)

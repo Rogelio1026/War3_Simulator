@@ -1,5 +1,5 @@
 import uuid
-from clock import Game
+from Attack import Attack
 
 armortype = {'light': 0, 'medium': 1, 'heavy': 2, 'fortified': 3, 'hero': 4, 'unarmored': 5}
 normal_attack = (1, 1.5, 1, .7, 1, 1)
@@ -84,7 +84,10 @@ class Unit:
         :param enemy: Unit
         :return: function
         """
-        enemy.underattacked(self.attack, self.attack_type)
+        self.enemies = []
+        self.enemies.append(enemy)
+        getAttack = Attack(self.attack, self.attack_type, self.name)
+        getAttack.sendAttack(self.enemies)
 
     def tick(self,fps):
         """
@@ -92,6 +95,3 @@ class Unit:
         :return: function
         """
         self.hpRegenerate(fps)
-
-    def __call__(self, *args, **kwargs):
-        return 1
