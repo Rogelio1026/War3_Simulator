@@ -29,11 +29,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="Attack_test.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Attack_test.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/War3_simulator/Attack_test.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+                <state relative-caret-position="154">
+                  <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
                   <folding>
                     <element signature="e#0#34#0" expanded="true" />
                   </folding>
@@ -41,11 +41,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Attack.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Attack.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/War3_simulator/Attack.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+                <state relative-caret-position="225">
+                  <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
                   <folding />
                 </state>
               </provider>
@@ -68,8 +68,8 @@
           <file leaf-file-name="Unit.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/War3_simulator/Unit.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-360">
-                  <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="13" />
+                <state relative-caret-position="267">
+                  <caret line="87" column="29" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
                   <folding>
                     <element signature="e#0#11#0" expanded="true" />
                   </folding>
@@ -518,21 +518,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_Attack_test - 2016.06.02 at 22h 19m 37s.xml">
-      <configuration name="Unittests in Attack_test" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_Attack_test - 2016.06.02 at 22h 20m 40s.xml">
-      <configuration name="Unittests in Attack_test" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_Attack_test - 2016.06.02 at 22h 21m 46s.xml">
-      <configuration name="Unittests in Attack_test" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_Attack_test - 2016.06.02 at 22h 22m 39s.xml">
-      <configuration name="Unittests in Attack_test" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_Attack_test - 2016.06.02 at 22h 22m 48s.xml">
-      <configuration name="Unittests in Attack_test" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_Attack_test - 2016.06.04 at 00h 38m 36s.xml">
       <configuration name="Unittests in Attack_test" configurationId="tests" />
     </history-entry>
@@ -548,6 +533,21 @@
     <history-entry file="Unittests_in_Attack_test - 2016.06.04 at 00h 52m 27s.xml">
       <configuration name="Unittests in Attack_test" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_Attack_test - 2016.06.04 at 15h 39m 18s.xml">
+      <configuration name="Unittests in Attack_test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_Attack_test - 2016.06.04 at 15h 39m 23s.xml">
+      <configuration name="Unittests in Attack_test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_Attack_test - 2016.06.04 at 15h 42m 33s.xml">
+      <configuration name="Unittests in Attack_test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_Attack_test - 2016.06.04 at 15h 43m 17s.xml">
+      <configuration name="Unittests in Attack_test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_Attack_test - 2016.06.04 at 16h 06m 33s.xml">
+      <configuration name="Unittests in Attack_test" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -560,16 +560,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24543288" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329235" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24939467" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29863015" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24861" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29863015" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -898,14 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/War3_simulator/Attack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/War3_simulator/clock.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -916,8 +908,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/War3_simulator/Unit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="13" />
+        <state relative-caret-position="267">
+          <caret line="87" column="29" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -926,11 +918,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/War3_simulator/Attack_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        <state relative-caret-position="154">
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/War3_simulator/Attack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>

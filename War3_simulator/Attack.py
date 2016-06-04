@@ -12,7 +12,6 @@ class Attack:
         self.attack_type = attack_type
         self.attacker = attacker
 
-    def sendAttack(self, enemies):
-        for enemy in enemies:
-            enemy.underattacked(self.damage, self.attack_type)
+    def sendAttack(self, enemy):
+        enemy.underattacked(self.damage, self.attack_type)
 

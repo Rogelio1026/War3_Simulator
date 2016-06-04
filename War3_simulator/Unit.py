@@ -78,16 +78,14 @@ class Unit:
     def alive(self):
         return self.current_hp > 0
 
-    def attack(self, enemy):
+    def launchAttack(self, enemy):
         """
 
         :param enemy: Unit
         :return: function
         """
-        self.enemies = []
-        self.enemies.append(enemy)
         getAttack = Attack(self.attack, self.attack_type, self.name)
-        getAttack.sendAttack(self.enemies)
+        getAttack.sendAttack(enemy)
 
     def tick(self,fps):
         """
