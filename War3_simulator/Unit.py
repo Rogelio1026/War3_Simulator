@@ -103,3 +103,5 @@ class Unit:
     def reduce_cooldown(self, fps):
         if self.cooldown_remaining > 0:
             self.cooldown_remaining -= 1/fps
+            if self.cooldown_remaining < 0.001:
+                self.cooldown_remaining = 0

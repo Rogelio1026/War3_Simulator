@@ -96,7 +96,7 @@ class TestStringMethods(unittest.TestCase):
         while count < t:
             game.clock()
             count += 1
-        self.assertEqual(round(peasant.cooldown_remaining), 0)
+        self.assertEqual(peasant.cooldown_remaining, 0)
         #peasant.cooldown_remaining =0
         peasant.launchAttack(peon)
         print(peon.current_hp, 240)
