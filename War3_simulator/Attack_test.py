@@ -70,5 +70,37 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(peasant.current_hp, 0)
         self.assertEqual(peasant.alive(), False)
         # peasant.comparDoubles(1,2,1)
+
+    def test_attack_cooldown(self):
+        game = Game()
+        peasant = Peasant()
+        peon = Peon()
+        game.add_recipients(peasant)
+        game.add_recipients(peon)
+        self.assertEqual(peon.current_hp, 250)
+        self.assertEqual(peasant.cooldown, 2)
+        self.assertEqual(peasant.cooldown_remaining, 0)
+        peasant.launchAttack(peon)
+        self.assertEqual(peasant.cooldown_remaining, 2)
+        self.assertEqual(peon.current_hp, 244.5)
+        count = 0
+        t = 24
+        while count < t:
+            game.clock()
+            count += 1
+        self.assertEqual(round(peasant.cooldown_remaining), 1)
+        peasant.launchAttack(peon)
+        print(peon.current_hp, 245.5)
+        count = 0
+        t = 24
+        while count < t:
+            game.clock()
+            count += 1
+        self.assertEqual(round(peasant.cooldown_remaining), 0)
+        #peasant.cooldown_remaining =0
+        peasant.launchAttack(peon)
+        print(peon.current_hp, 240)
+
+
 if __name__ == '__main__':
     unittest.main()

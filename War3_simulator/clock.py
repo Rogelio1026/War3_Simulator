@@ -1,5 +1,5 @@
 class Game:
-    def __init__(self,fps=24):
+    def __init__(self,fps=24.0):
         self.fps = fps
         self.recipients = []
 

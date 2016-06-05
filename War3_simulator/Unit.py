@@ -14,7 +14,7 @@ attack_type = {'normal': normal_attack, 'pierce': pierce_attack, 'siege': siege_
 
 
 class Unit:
-    def __init__(self, max_hp=1, attack=0, attack_type = 'normal', armor_type='unarmored', armor=0, hp_regeneration_rate=1):
+    def __init__(self, max_hp=1, attack=0, attack_type = 'normal', armor_type='unarmored', armor=0, hp_regeneration_rate=1, cooldown=2):
         self.name = uuid.uuid4()
         self.max_hp = max_hp
         self.attack = attack
@@ -23,6 +23,8 @@ class Unit:
         self.armor = armor
         self.current_hp = max_hp
         self.hp_regeneration_rate = hp_regeneration_rate
+        self.cooldown = cooldown
+        self.cooldown_remaining = 0
 
     def underattacked(self, damage, underattack_type):
         """
@@ -71,7 +73,7 @@ class Unit:
         :return:current_hp
         """
         if self.canRegenerateHp():
-             self.current_hp = self.current_hp + self.hp_regeneration_rate / fps
+             self.current_hp += self.hp_regeneration_rate / fps
              if self.current_hp > self.max_hp:
                     self.current_hp = self.max_hp
 
@@ -85,7 +87,10 @@ class Unit:
         :return: function
         """
         getAttack = Attack(self.attack, self.attack_type, self.name)
-        getAttack.sendAttack(enemy)
+        if self.cooldown_remaining == 0:
+            getAttack.sendAttack(enemy)
+            self.cooldown_remaining = self.cooldown
+
 
     def tick(self,fps):
         """
@@ -93,3 +98,8 @@ class Unit:
         :return: function
         """
         self.hpRegenerate(fps)
+        self.reduce_cooldown(fps)
+
+    def reduce_cooldown(self, fps):
+        if self.cooldown_remaining > 0:
+            self.cooldown_remaining -= 1/fps
