@@ -59,6 +59,10 @@ class Unit:
             self.current_hp = 0
             Unit.alive(self)
 
+    def force_attack(self, enemy):
+        getAttack = Attack(self.attack, self.attack_type, self.name)
+        getAttack.sendAttack(enemy)
+
     @staticmethod
     def damage_change_lookup(underattack_type, armor_type):
         """
