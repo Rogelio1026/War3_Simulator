@@ -101,6 +101,21 @@ class TestStringMethods(unittest.TestCase):
         peasant.launchAttack(peon)
         print(peon.current_hp, 240)
 
+    def test_force_attack(self):
+        game = Game()
+        peasant = Peasant()
+        peon = Peon()
+        game.add_recipients(peasant)
+        game.add_recipients(peon)
+        self.assertEqual(peon.current_hp, 250)
+        self.assertEqual(peasant.cooldown, 2)
+        self.assertEqual(peasant.cooldown_remaining, 0)
+        peasant.launchAttack(peon)
+        self.assertEqual(peasant.cooldown_remaining, 2)
+        self.assertEqual(peon.current_hp, 244.5)
+        peasant.force_attack(peon)
+        self.assertEqual(peon.current_hp, 239)
+        self.assertEqual(peasant.cooldown_remaining, 2)
 
 if __name__ == '__main__':
     unittest.main()
