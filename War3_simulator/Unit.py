@@ -26,6 +26,25 @@ class Unit:
         self.cooldown = cooldown
         self.cooldown_remaining = 0
 
+    def tick(self,fps):
+        """
+        This function is called whenever time changed
+        :return: function
+        """
+        self.hpRegenerate(fps)
+        self.reduce_cooldown(fps)
+
+    def launchAttack(self, enemy):
+        """
+
+        :param enemy: Unit
+        :return: function
+        """
+        getAttack = Attack(self.attack, self.attack_type, self.name)
+        if self.cooldown_remaining == 0:
+            getAttack.sendAttack(enemy)
+            self.cooldown_remaining = self.cooldown
+
     def underattacked(self, damage, underattack_type):
         """
 
@@ -40,13 +59,9 @@ class Unit:
             self.current_hp = 0
             Unit.alive(self)
 
-    def canRegenerateHp(self):
-        return 0 < self.current_hp and self.current_hp < self.max_hp
-
     @staticmethod
     def damage_change_lookup(underattack_type, armor_type):
         """
-
         :param underattakc_type: is str
         :param armor_type: is str
         :return: damage change
@@ -67,6 +82,10 @@ class Unit:
         else:
             return 2 - 0.94 ** armor
 
+    def canRegenerateHp(self):
+        return 0 < self.current_hp and self.current_hp < self.max_hp
+
+
     def hpRegenerate(self,fps):
         """
 
@@ -80,25 +99,6 @@ class Unit:
     def alive(self):
         return self.current_hp > 0
 
-    def launchAttack(self, enemy):
-        """
-
-        :param enemy: Unit
-        :return: function
-        """
-        getAttack = Attack(self.attack, self.attack_type, self.name)
-        if self.cooldown_remaining == 0:
-            getAttack.sendAttack(enemy)
-            self.cooldown_remaining = self.cooldown
-
-
-    def tick(self,fps):
-        """
-        This function is called whenever time changed
-        :return: function
-        """
-        self.hpRegenerate(fps)
-        self.reduce_cooldown(fps)
 
     def reduce_cooldown(self, fps):
         if self.cooldown_remaining > 0:
