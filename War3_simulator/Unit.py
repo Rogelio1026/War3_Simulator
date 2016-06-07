@@ -40,10 +40,8 @@ class Unit:
         :param enemy: Unit
         :return: function
         """
-        getAttack = Attack(self.attack, self.attack_type, self.name)
         if self.cooldown_remaining == 0:
-            getAttack.sendAttack(enemy)
-            self.cooldown_remaining = self.cooldown
+            self.force_attack(enemy)
 
     def underattacked(self, damage, underattack_type):
         """
@@ -62,6 +60,7 @@ class Unit:
     def force_attack(self, enemy):
         getAttack = Attack(self.attack, self.attack_type, self.name)
         getAttack.sendAttack(enemy)
+        self.cooldown_remaining = self.cooldown
 
     @staticmethod
     def damage_change_lookup(underattack_type, armor_type):
