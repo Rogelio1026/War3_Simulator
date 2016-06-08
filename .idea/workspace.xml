@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="43295ed3-b75c-4ef8-9df8-b796dec9df8a" name="Default" comment="multiple city">
       <change type="NEW" beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/options/cachedDictionary.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/War3_simulator/Footman_test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/War3_simulator/Attack_test.py" afterPath="$PROJECT_DIR$/War3_simulator/Attack_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/War3_simulator/Footman.py" afterPath="$PROJECT_DIR$/War3_simulator/Footman.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/War3_simulator/Unit.py" afterPath="$PROJECT_DIR$/War3_simulator/Unit.py" />
     </list>
     <ignored path="learn_python.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,35 +28,39 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Unit.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/War3_simulator/Unit.py">
+        <leaf>
+          <file leaf-file-name="Attack_test.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/War3_simulator/Attack_test.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-106">
-                  <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
+                <state relative-caret-position="285">
+                  <caret line="31" column="65" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="65" />
                   <folding>
-                    <element signature="e#0#11#0" expanded="true" />
+                    <element signature="e#0#34#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Attack.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/War3_simulator/Attack.py">
+          <file leaf-file-name="Footman_test.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/War3_simulator/Footman_test.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-                  <folding />
+                <state relative-caret-position="105">
+                  <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+                  <folding>
+                    <element signature="e#0#15#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="clock.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/War3_simulator/clock.py">
+          <file leaf-file-name="Unit.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/War3_simulator/Unit.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
-                  <folding />
+                <state relative-caret-position="240">
+                  <caret line="70" column="11" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+                  <folding>
+                    <element signature="e#0#11#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -63,14 +69,12 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="Attack_test.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/War3_simulator/Attack_test.py">
+          <file leaf-file-name="Footman.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/War3_simulator/Footman.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="350">
-                  <caret line="117" column="55" selection-start-line="117" selection-start-column="55" selection-end-line="117" selection-end-column="55" />
-                  <folding>
-                    <element signature="e#0#34#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="375">
+                  <caret line="35" column="20" selection-start-line="34" selection-start-column="10" selection-end-line="35" selection-end-column="20" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -104,7 +108,6 @@
         <option value="$PROJECT_DIR$/War3_simulator/hp_regenrate.py" />
         <option value="$PROJECT_DIR$/War3_simulator/hp_regenrate_test.py" />
         <option value="$PROJECT_DIR$/War3_simulator/ne_building.py" />
-        <option value="$PROJECT_DIR$/War3_simulator/Footman.py" />
         <option value="$PROJECT_DIR$/War3_simulator/library/test_utility.py" />
         <option value="$PROJECT_DIR$/War3_simulator/__init__.py" />
         <option value="$PROJECT_DIR$/War3_simulator/Humans_peasant.py" />
@@ -113,8 +116,10 @@
         <option value="$PROJECT_DIR$/War3_simulator/Orcs_peon.py" />
         <option value="$PROJECT_DIR$/War3_simulator/Attack.py" />
         <option value="$PROJECT_DIR$/War3_simulator/clock.py" />
-        <option value="$PROJECT_DIR$/War3_simulator/Unit.py" />
         <option value="$PROJECT_DIR$/War3_simulator/Attack_test.py" />
+        <option value="$PROJECT_DIR$/War3_simulator/Unit.py" />
+        <option value="$PROJECT_DIR$/War3_simulator/Footman.py" />
+        <option value="$PROJECT_DIR$/War3_simulator/Footman_test.py" />
       </list>
     </option>
   </component>
@@ -215,7 +220,7 @@
       <recent name="$PROJECT_DIR$/War3_simulator" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in Attack_test">
+  <component name="RunManager" selected="Python tests.Unittests in Footman_test">
     <configuration default="false" name="Unit" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -244,28 +249,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="learn_python" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/War3_simulator/Attack_test.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in hp_regenrate_test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/War3_simulator" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="learn_python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/War3_simulator/hp_regenrate_test.py" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
@@ -309,6 +292,28 @@
       <option name="METHOD_NAME" value="test_attack_cooldown" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in Footman_test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/War3_simulator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="learn_python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/War3_simulator/Footman_test.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
@@ -453,17 +458,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.Unit" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in Attack_test" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in hp_regenrate_test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.clock" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestStringMethods.test_attack_cooldown" />
+      <item index="2" class="java.lang.String" itemvalue="Python.clock" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestStringMethods.test_attack_cooldown" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in Footman_test" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in Attack_test" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestStringMethods.test_attack_cooldown" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Unit" />
-        <item index="3" class="java.lang.String" itemvalue="Python.clock" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in hp_regenrate_test" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in Footman_test" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in Attack_test" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestStringMethods.test_attack_cooldown" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Unit" />
+        <item index="4" class="java.lang.String" itemvalue="Python.clock" />
       </list>
     </recent_temporary>
   </component>
@@ -506,21 +511,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_Attack_test - 2016.06.05 at 23h 36m 20s.xml">
-      <configuration name="Unittests in Attack_test" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_Attack_test - 2016.06.05 at 23h 36m 40s.xml">
-      <configuration name="Unittests in Attack_test" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_Attack_test - 2016.06.05 at 23h 36m 44s.xml">
-      <configuration name="Unittests in Attack_test" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_Attack_test - 2016.06.05 at 23h 37m 11s.xml">
-      <configuration name="Unittests in Attack_test" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_Attack_test - 2016.06.05 at 23h 37m 33s.xml">
-      <configuration name="Unittests in Attack_test" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_Attack_test - 2016.06.05 at 23h 39m 22s.xml">
       <configuration name="Unittests in Attack_test" configurationId="tests" />
     </history-entry>
@@ -536,6 +526,21 @@
     <history-entry file="Unittests_in_Attack_test - 2016.06.06 at 21h 53m 17s.xml">
       <configuration name="Unittests in Attack_test" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_Attack_test - 2016.06.07 at 22h 16m 34s.xml">
+      <configuration name="Unittests in Attack_test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_Attack_test - 2016.06.07 at 22h 18m 11s.xml">
+      <configuration name="Unittests in Attack_test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_Footman_test - 2016.06.08 at 20h 27m 59s.xml">
+      <configuration name="Unittests in Footman_test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_Footman_test - 2016.06.08 at 20h 30m 55s.xml">
+      <configuration name="Unittests in Footman_test" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_Footman_test - 2016.06.08 at 20h 49m 16s.xml">
+      <configuration name="Unittests in Footman_test" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -548,16 +553,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24543288" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329235" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24861" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29726028" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29726028" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -600,7 +605,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Unit_test.py" />
     <entry file="file://$PROJECT_DIR$/responder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -761,13 +765,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Unit_test.py" />
     <entry file="file://$PROJECT_DIR$/War3_simulator/hp_regenrate.py" />
-    <entry file="file://$PROJECT_DIR$/War3_simulator/Footman.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/War3_simulator/ne_building.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -795,6 +792,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -877,14 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/War3_simulator/clock.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/War3_simulator/Attack.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -893,22 +883,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/War3_simulator/clock.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/War3_simulator/Attack_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="31" column="65" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/War3_simulator/Unit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-106">
-          <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
+        <state relative-caret-position="240">
+          <caret line="70" column="11" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/War3_simulator/Attack_test.py">
+    <entry file="file://$PROJECT_DIR$/War3_simulator/Footman.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="117" column="55" selection-start-line="117" selection-start-column="55" selection-end-line="117" selection-end-column="55" />
+        <state relative-caret-position="375">
+          <caret line="35" column="20" selection-start-line="34" selection-start-column="10" selection-end-line="35" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/War3_simulator/Footman_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -14,7 +14,8 @@ attack_type = {'normal': normal_attack, 'pierce': pierce_attack, 'siege': siege_
 
 
 class Unit:
-    def __init__(self, max_hp=1, attack=0, attack_type = 'normal', armor_type='unarmored', armor=0, hp_regeneration_rate=1, cooldown=2):
+    def __init__(self, max_hp=1, attack=0, attack_type = 'normal', armor_type='unarmored', armor=0,
+                 hp_regeneration_rate=1, cooldown=2):
         self.name = uuid.uuid4()
         self.max_hp = max_hp
         self.attack = attack
@@ -62,8 +63,7 @@ class Unit:
         getAttack.sendAttack(enemy)
         self.cooldown_remaining = self.cooldown
 
-    @staticmethod
-    def damage_change_lookup(underattack_type, armor_type):
+    def damage_change_lookup(self, underattack_type, armor_type):
         """
         :param underattakc_type: is str
         :param armor_type: is str
