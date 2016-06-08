@@ -9,9 +9,9 @@ class TestStringMethods(unittest.TestCase):
     def test_under_attacked(self):
         peasant = Peasant()
         self.assertEqual(peasant.max_hp,220)
-        self.assertEqual(peasant.armor_type, 'light')
+        self.assertEqual(peasant.armor_type, 'medium')
         peasant.underattacked(50, 'pierce')
-        self.assertEqual(peasant.current_hp, 120)
+        self.assertEqual(peasant.current_hp, 182.5)
         self.assertEqual(peasant.alive(), True)
         peasant.underattacked(250, 'hero')
         self.assertEqual(peasant.current_hp, 0)
@@ -49,17 +49,17 @@ class TestStringMethods(unittest.TestCase):
         peasant = Peasant()
         game.add_recipients(peasant)
         self.assertEqual(peasant.max_hp, 220)
-        self.assertEqual(peasant.armor_type, 'light')
+        self.assertEqual(peasant.armor_type, 'medium')
         self.assertEqual(peasant.hp_regeneration_rate, 1)
         peasant.underattacked(50, 'pierce')
-        self.assertEqual(peasant.current_hp, 120)
+        self.assertEqual(peasant.current_hp, 182.5)
         self.assertEqual(peasant.alive(), True)
         count = 0
         t = 24
         while count < t:
             game.clock()
             count += 1
-        self.assertEqual(round(peasant.current_hp), 121.0)
+        self.assertEqual(round(peasant.current_hp), 183.0)
         peasant.underattacked(250, 'hero')
         self.assertEqual(peasant.alive(), False)
         count = 0

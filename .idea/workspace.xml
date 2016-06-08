@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="43295ed3-b75c-4ef8-9df8-b796dec9df8a" name="Default" comment="multiple city">
       <change type="NEW" beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/options/cachedDictionary.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/War3_simulator/Footman_test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/War3_simulator/Footman.py" afterPath="$PROJECT_DIR$/War3_simulator/Footman.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/War3_simulator/Attack_test.py" afterPath="$PROJECT_DIR$/War3_simulator/Attack_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/War3_simulator/Humans_peasant.py" afterPath="$PROJECT_DIR$/War3_simulator/Humans_peasant.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/War3_simulator/Humans_peasant_test.py" afterPath="$PROJECT_DIR$/War3_simulator/Humans_peasant_test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/War3_simulator/Unit.py" afterPath="$PROJECT_DIR$/War3_simulator/Unit.py" />
     </list>
     <ignored path="learn_python.iws" />
@@ -29,37 +30,25 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="Attack_test.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/War3_simulator/Attack_test.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="31" column="65" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="65" />
-                  <folding>
-                    <element signature="e#0#34#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Footman_test.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/War3_simulator/Footman_test.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-                  <folding>
-                    <element signature="e#0#15#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="Unit.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/War3_simulator/Unit.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="70" column="11" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+                <state relative-caret-position="90">
+                  <caret line="53" column="55" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
                   <folding>
                     <element signature="e#0#11#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Humans_peasant_test.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/War3_simulator/Humans_peasant_test.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+                  <folding>
+                    <element signature="e#0#15#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -69,11 +58,23 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="Footman.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/War3_simulator/Footman.py">
+          <file leaf-file-name="Attack_test.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/War3_simulator/Attack_test.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="35" column="20" selection-start-line="34" selection-start-column="10" selection-end-line="35" selection-end-column="20" />
+                <state relative-caret-position="432">
+                  <caret line="101" column="26" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="26" />
+                  <folding>
+                    <element signature="e#0#34#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Humans_peasant.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/War3_simulator/Humans_peasant.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
                   <folding />
                 </state>
               </provider>
@@ -104,22 +105,22 @@
         <option value="$PROJECT_DIR$/Unit_test.py" />
         <option value="$PROJECT_DIR$/War3_simulator/Orcs_GreatHall.py" />
         <option value="$PROJECT_DIR$/War3_simulator/test/Humans_peasant_test.py" />
-        <option value="$PROJECT_DIR$/War3_simulator/Humans_peasant_test.py" />
         <option value="$PROJECT_DIR$/War3_simulator/hp_regenrate.py" />
         <option value="$PROJECT_DIR$/War3_simulator/hp_regenrate_test.py" />
         <option value="$PROJECT_DIR$/War3_simulator/ne_building.py" />
         <option value="$PROJECT_DIR$/War3_simulator/library/test_utility.py" />
         <option value="$PROJECT_DIR$/War3_simulator/__init__.py" />
-        <option value="$PROJECT_DIR$/War3_simulator/Humans_peasant.py" />
         <option value="$PROJECT_DIR$/War3_simulator/Building.py" />
         <option value="$PROJECT_DIR$/War3_simulator/Humans_Townhall.py" />
         <option value="$PROJECT_DIR$/War3_simulator/Orcs_peon.py" />
         <option value="$PROJECT_DIR$/War3_simulator/Attack.py" />
         <option value="$PROJECT_DIR$/War3_simulator/clock.py" />
-        <option value="$PROJECT_DIR$/War3_simulator/Attack_test.py" />
-        <option value="$PROJECT_DIR$/War3_simulator/Unit.py" />
         <option value="$PROJECT_DIR$/War3_simulator/Footman.py" />
         <option value="$PROJECT_DIR$/War3_simulator/Footman_test.py" />
+        <option value="$PROJECT_DIR$/War3_simulator/Humans_peasant.py" />
+        <option value="$PROJECT_DIR$/War3_simulator/Unit.py" />
+        <option value="$PROJECT_DIR$/War3_simulator/Attack_test.py" />
+        <option value="$PROJECT_DIR$/War3_simulator/Humans_peasant_test.py" />
       </list>
     </option>
   </component>
@@ -220,7 +221,7 @@
       <recent name="$PROJECT_DIR$/War3_simulator" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in Footman_test">
+  <component name="RunManager" selected="Python tests.Unittests in Humans_peasant_test">
     <configuration default="false" name="Unit" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -260,23 +261,6 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="clock" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/War3_simulator" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="learn_python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/War3_simulator/clock.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="Unittest TestStringMethods.test_attack_cooldown" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -310,6 +294,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="learn_python" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/War3_simulator/Footman_test.py" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in Humans_peasant_test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/War3_simulator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="learn_python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/War3_simulator/Humans_peasant_test.py" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
@@ -458,17 +464,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.Unit" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in Attack_test" />
-      <item index="2" class="java.lang.String" itemvalue="Python.clock" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestStringMethods.test_attack_cooldown" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in Footman_test" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestStringMethods.test_attack_cooldown" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in Footman_test" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in Humans_peasant_test" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in Footman_test" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in Humans_peasant_test" />
         <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in Attack_test" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestStringMethods.test_attack_cooldown" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Unit" />
-        <item index="4" class="java.lang.String" itemvalue="Python.clock" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in Footman_test" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestStringMethods.test_attack_cooldown" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Unit" />
       </list>
     </recent_temporary>
   </component>
@@ -511,35 +517,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_Attack_test - 2016.06.05 at 23h 39m 22s.xml">
+    <history-entry file="Unittests_in_Attack_test - 2016.06.08 at 21h 24m 54s.xml">
       <configuration name="Unittests in Attack_test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Attack_test - 2016.06.06 at 21h 46m 53s.xml">
+    <history-entry file="Unittests_in_Attack_test - 2016.06.08 at 21h 24m 59s.xml">
       <configuration name="Unittests in Attack_test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Attack_test - 2016.06.06 at 21h 47m 31s.xml">
+    <history-entry file="Unittests_in_Attack_test - 2016.06.08 at 21h 28m 19s.xml">
       <configuration name="Unittests in Attack_test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Attack_test - 2016.06.06 at 21h 52m 58s.xml">
+    <history-entry file="Unittests_in_Attack_test - 2016.06.08 at 21h 28m 57s.xml">
       <configuration name="Unittests in Attack_test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Attack_test - 2016.06.06 at 21h 53m 17s.xml">
+    <history-entry file="Unittests_in_Attack_test - 2016.06.08 at 21h 29m 40s.xml">
       <configuration name="Unittests in Attack_test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Attack_test - 2016.06.07 at 22h 16m 34s.xml">
+    <history-entry file="Unittests_in_Attack_test - 2016.06.08 at 21h 29m 50s.xml">
       <configuration name="Unittests in Attack_test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Attack_test - 2016.06.07 at 22h 18m 11s.xml">
+    <history-entry file="Unittests_in_Attack_test - 2016.06.08 at 21h 29m 59s.xml">
       <configuration name="Unittests in Attack_test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Footman_test - 2016.06.08 at 20h 27m 59s.xml">
+    <history-entry file="Unittests_in_Footman_test - 2016.06.08 at 21h 08m 28s.xml">
       <configuration name="Unittests in Footman_test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Footman_test - 2016.06.08 at 20h 30m 55s.xml">
+    <history-entry file="Unittests_in_Footman_test - 2016.06.08 at 21h 11m 10s.xml">
       <configuration name="Unittests in Footman_test" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_Footman_test - 2016.06.08 at 20h 49m 16s.xml">
-      <configuration name="Unittests in Footman_test" configurationId="tests" />
+    <history-entry file="Unittests_in_Humans_peasant_test - 2016.06.08 at 21h 33m 42s.xml">
+      <configuration name="Unittests in Humans_peasant_test" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -749,13 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/War3_simulator/Humans_peasant_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/War3_simulator/test/Humans_peasant_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -814,14 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/War3_simulator/Humans_peasant.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -891,38 +882,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/War3_simulator/Attack_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="31" column="65" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/War3_simulator/Unit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="70" column="11" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/War3_simulator/Footman.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="35" column="20" selection-start-line="34" selection-start-column="10" selection-end-line="35" selection-end-column="20" />
+        <state relative-caret-position="140">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/War3_simulator/Footman_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        <state relative-caret-position="240">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/War3_simulator/Unit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="53" column="55" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/War3_simulator/Attack_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="101" column="26" selection-start-line="101" selection-start-column="26" selection-end-line="101" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/War3_simulator/Humans_peasant.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/War3_simulator/Humans_peasant_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

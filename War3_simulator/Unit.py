@@ -51,7 +51,7 @@ class Unit:
         :param underattack_type: is str
         :return:current hp
         """
-        damage_change = Unit.damage_change_lookup(underattack_type,self.armor_type)
+        damage_change = Unit.damage_change_lookup(self,underattack_type,self.armor_type)
         damage_soak = Unit.damage_soak(self.armor)
         self.current_hp = self.current_hp - damage * damage_change * damage_soak
         if self.current_hp <= 0:
