@@ -15,7 +15,7 @@ attack_type = {'normal': normal_attack, 'pierce': pierce_attack, 'siege': siege_
 
 class Unit:
     def __init__(self, max_hp=1, attack=0, attack_type = 'normal', armor_type='unarmored', armor=0,
-                 hp_regeneration_rate=1, cooldown=2):
+                 hp_regeneration_rate=1, cooldown=2, max_mana=0, mana_regeneration_rate=0, mana_cooldown=2):
         self.name = uuid.uuid4()
         self.max_hp = max_hp
         self.attack = attack
@@ -26,6 +26,10 @@ class Unit:
         self.hp_regeneration_rate = hp_regeneration_rate
         self.cooldown = cooldown
         self.cooldown_remaining = 0
+        self.max_mana = max_mana
+        self.current_mana = max_mana
+        self.mana_regeneration_rate = mana_regeneration_rate
+        self.mana_cooldown = mana_cooldown
 
     def tick(self,fps):
         """
@@ -33,6 +37,7 @@ class Unit:
         :return: function
         """
         self.hp_regenerate(fps)
+        self.mana_regenerate(fps)
         self.reduce_cooldown(fps)
 
     def launch_attack(self, enemy):
@@ -85,7 +90,7 @@ class Unit:
         else:
             return 2 - 0.94 ** armor
 
-    def canRegenerateHp(self):
+    def can_regenerate_hp(self):
         return 0 < self.current_hp and self.current_hp < self.max_hp
 
 
@@ -94,10 +99,19 @@ class Unit:
 
         :return:current_hp
         """
-        if self.canRegenerateHp():
+        if self.can_regenerate_hp():
              self.current_hp += self.hp_regeneration_rate / fps
              if self.current_hp > self.max_hp:
                     self.current_hp = self.max_hp
+
+    def can_regenerate_mana(self):
+        return 0 < self.max_mana and self.current_mana < self.max_mana
+
+    def mana_regenerate(self, fps):
+        if self.can_regenerate_mana():
+            self.current_mana += self.mana_regeneration_rate / fps
+            if self.current_mana > self.max_mana:
+                self.current_mana = self.max_mana
 
     def alive(self):
         return self.current_hp > 0
