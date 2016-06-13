@@ -38,6 +38,10 @@ class Unit:
         self.hp_regenerate(fps)
         self.mana_regenerate(fps)
         self.reduce_cooldown(fps)
+        self.spell_clock(fps)
+
+    def spell_clock(self,fps):
+        pass
 
     def launch_attack(self, enemy):
         """
