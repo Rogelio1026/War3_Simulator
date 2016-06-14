@@ -8,8 +8,11 @@ class Priest(Unit):
         self.heal_cooldown_remaining = 0
 
     def heal(self,target):
-        if self.heal_cooldown_remaining == 0 and target.alive() and self.current_mana >= 5:
-            self.launch_heal(target)
+        if self.heal_cooldown_remaining == 0 and target.alive():
+            if self.current_mana >= 5:
+                self.launch_heal(target)
+            else:
+                print('There is no mana')
 
     def launch_heal(self,target):
         target.current_hp += 25
@@ -17,8 +20,6 @@ class Priest(Unit):
         self.heal_cooldown_remaining = self.heal_cooldown
         if target.current_hp > target.max_hp:
             target.current_hp = target.max_hp
-        else:
-            print('There is no mana')
 
     def heal_reduce_cooldown(self,fps):
         self.heal_cooldown_remaining -= 1 / fps
