@@ -34,3 +34,6 @@ class Priest(Unit):
         if self.can_reduce_heal_cooldown():
             self.heal_reduce_cooldown(fps)
 
+    def dispel_magic(self,target):
+        pass
+
