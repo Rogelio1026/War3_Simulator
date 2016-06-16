@@ -18,3 +18,6 @@ class TestStringMethods(unittest.TestCase):
         peasant.current_hp = 200
         troll_berserker.force_attack(peasant)
         self.assertEqual(peasant.current_hp, 162.5)
+
+if __name__ == '__main__':
+    unittest.main()
