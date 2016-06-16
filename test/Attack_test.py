@@ -3,7 +3,7 @@ from Orcs_peon import Peon
 from Humans_Townhall import HumansTownhall
 from clock import Game
 from Unit import Unit
-# from library import compareDoubles
+from library.test_utility import compare_doubles
 import unittest
 class TestStringMethods(unittest.TestCase):
     def test_under_attacked(self):
@@ -59,7 +59,7 @@ class TestStringMethods(unittest.TestCase):
         while count < t:
             game.clock()
             count += 1
-        self.assertEqual(round(peasant.current_hp), 183.0)
+        self.assertEqual(compare_doubles(peasant.current_hp, 183.5),True)
         peasant.underattacked(250, 'hero')
         self.assertEqual(peasant.alive(), False)
         count = 0
@@ -69,7 +69,6 @@ class TestStringMethods(unittest.TestCase):
             count += 1
         self.assertEqual(peasant.current_hp, 0)
         self.assertEqual(peasant.alive(), False)
-        # peasant.comparDoubles(1,2,1)
 
     def test_attack_cooldown(self):
         game = Game()
@@ -88,18 +87,17 @@ class TestStringMethods(unittest.TestCase):
         while count < t:
             game.clock()
             count += 1
-        self.assertEqual(round(peasant.cooldown_remaining), 1)
+        self.assertEqual(compare_doubles(peasant.cooldown_remaining, 1),True)
         peasant.launch_attack(peon)
-        print(peon.current_hp, 245.5)
+        self.assertEqual(compare_doubles(peon.current_hp, 245.5),True)
         count = 0
         t = 24
         while count < t:
             game.clock()
             count += 1
         self.assertEqual(peasant.cooldown_remaining, 0)
-        #peasant.cooldown_remaining =0
         peasant.launch_attack(peon)
-        print(peon.current_hp, 240)
+        self.assertEqual(compare_doubles(peon.current_hp, 241.0),True)
 
     def test_force_attack(self):
         game = Game()
