@@ -15,7 +15,8 @@ attack_type = {'normal': normal_attack, 'pierce': pierce_attack, 'siege': siege_
 
 class Unit:
     def __init__(self, max_hp=1, attack=0, attack_type = 'normal', armor_type='unarmored', armor=0,
-                 hp_regeneration_rate=1, cooldown=2, max_mana=0, mana_regeneration_rate=0):
+                 hp_regeneration_rate=1, cooldown=2, max_mana=0, mana_regeneration_rate=0, position = 'ground',
+                 attackable_position = ['ground']):
         self.name = uuid.uuid4()
         self.max_hp = max_hp
         self.attack = attack
@@ -29,6 +30,8 @@ class Unit:
         self.max_mana = max_mana
         self.current_mana = max_mana
         self.mana_regeneration_rate = mana_regeneration_rate
+        self.position = position
+        self.attackable_position = attackable_position
 
     def tick(self,fps):
         """
@@ -49,9 +52,12 @@ class Unit:
         :param enemy: Unit
         :return: function
         """
-        if self.cooldown_remaining == 0:
-            self.force_attack(enemy)
-            self.cooldown_remaining = self.cooldown
+        if enemy.position in self.attackable_position:
+            if self.cooldown_remaining == 0:
+                self.force_attack(enemy)
+                self.cooldown_remaining = self.cooldown
+        else:
+            print('You cannot attack')
 
     def underattacked(self, damage, underattack_type):
         """
