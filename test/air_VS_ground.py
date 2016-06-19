@@ -16,7 +16,9 @@ class TestStringMethods(unittest.TestCase):
         flying_machine.launch_attack(peasant)
         self.assertEqual(peasant.current_hp, 220)
         self.assertEqual(flying_machine.current_hp, 200)
-
+        flying_machine.flying_machine_bombs()
+        flying_machine.launch_attack(peasant)
+        self.assertEqual(compare_doubles(peasant.current_hp, 214.375),True)
 
 
 if __name__ == '__main__':
