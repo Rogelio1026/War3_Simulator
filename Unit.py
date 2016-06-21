@@ -1,5 +1,6 @@
 import uuid
 from Attack import Attack
+from library import test_utility
 
 armortype = {'light': 0, 'medium': 1, 'heavy': 2, 'fortified': 3, 'hero': 4, 'unarmored': 5}
 normal_attack = (1, 1.5, 1, .7, 1, 1)
@@ -32,6 +33,9 @@ class Unit:
         self.mana_regeneration_rate = mana_regeneration_rate
         self.position = position
         self.attackable_position = attackable_position
+        self.air_attack = 0
+        self.air_attack_cooldown = 0
+        self.air_attack_type = None
 
     def tick(self,fps):
         """
@@ -55,7 +59,10 @@ class Unit:
         if enemy.position in self.attackable_position:
             if self.cooldown_remaining == 0:
                 self.force_attack(enemy)
-                self.cooldown_remaining = self.cooldown
+                if enemy.position == 'air':
+                    self.cooldown_remaining = self.air_attack_cooldown
+                else:
+                    self.cooldown_remaining = self.cooldown
         else:
             print('You cannot attack')
 
@@ -74,8 +81,12 @@ class Unit:
             Unit.alive(self)
 
     def force_attack(self, enemy):
-        getAttack = Attack(self.attack, self.attack_type, self.name)
-        getAttack.sendAttack(enemy)
+        if enemy.position == 'air':
+            getAttack = Attack(self.air_attack, self.air_attack_type, self.name)
+            getAttack.sendAttack(enemy)
+        else:
+            getAttack = Attack(self.attack, self.attack_type, self.name)
+            getAttack.sendAttack(enemy)
 
     def damage_change_lookup(self, underattack_type, armor_type):
         """
@@ -126,8 +137,5 @@ class Unit:
         return self.current_hp > 0
 
 
-    def reduce_cooldown(self, fps):
-        if self.cooldown_remaining > 0:
-            self.cooldown_remaining -= 1/fps
-            if self.cooldown_remaining < 0.001:
-                self.cooldown_remaining = 0
+    def reduce_cooldown(self,fps):
+        self.cooldown_remaining = test_utility.cooldown(self.cooldown_remaining, fps)
