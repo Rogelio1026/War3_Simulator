@@ -1,5 +1,5 @@
 from Unit import Unit
-from library import test_utility
+from library import utility
 
 class Priest(Unit):
     def __init__(self):
@@ -23,13 +23,16 @@ class Priest(Unit):
             target.current_hp = target.max_hp
 
     def heal_reduce_cooldown(self,fps):
-        self.heal_cooldown_remaining = test_utility.cooldown(self.heal_cooldown_remaining, fps)
+        self.heal_cooldown_remaining = utility.cooldown(self.heal_cooldown_remaining, fps)
 
     def can_reduce_heal_cooldown(self):
         if self.heal_cooldown_remaining > 0:
             return True
 
-    def spell_clock(self,fps):
+    def tick(self,fps):
+        self.time_ralated_functions.append(self.heal_tick(fps))
+
+    def heal_tick(self,fps):
         if self.can_reduce_heal_cooldown():
             self.heal_reduce_cooldown(fps)
 

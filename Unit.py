@@ -36,16 +36,15 @@ class Unit:
         self.air_attack = 0
         self.air_attack_cooldown = 0
         self.air_attack_type = None
+        self.time_ralated_functions = [self.hp_regenerate,self.mana_regenerate,self.reduce_cooldown]
 
     def tick(self,fps):
         """
         This function is called whenever time changed
         :return: function
         """
-        self.hp_regenerate(fps)
-        self.mana_regenerate(fps)
-        self.reduce_cooldown(fps)
-        self.spell_clock(fps)
+        for functions in self.time_ralated_functions:
+            functions(fps)
 
     def spell_clock(self,fps):
         pass
