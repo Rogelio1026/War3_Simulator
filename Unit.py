@@ -17,7 +17,7 @@ attack_type = {'normal': normal_attack, 'pierce': pierce_attack, 'siege': siege_
 class Unit:
     def __init__(self, max_hp=1, attack=0, attack_type = 'normal', armor_type='unarmored', armor=0,
                  hp_regeneration_rate=1, cooldown=2, max_mana=0, mana_regeneration_rate=0, position = 'ground',
-                 attackable_position=['ground', 'building']):
+                 attackable_position=['ground', 'building'], owner='neutral'):
         self.name = uuid.uuid4()
         self.max_hp = max_hp
         self.attack = attack
@@ -37,6 +37,7 @@ class Unit:
         self.air_attack_cooldown = 0
         self.air_attack_type = None
         self.time_ralated_functions = [self.hp_regenerate,self.mana_regenerate,self.reduce_cooldown]
+        self.owner = owner
 
     def tick(self,fps):
         """
