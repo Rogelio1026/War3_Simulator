@@ -1,6 +1,6 @@
 import uuid
 from Attack import Attack
-from library import test_utility
+from library import utility
 
 armortype = {'light': 0, 'medium': 1, 'heavy': 2, 'fortified': 3, 'hero': 4, 'unarmored': 5}
 normal_attack = (1, 1.5, 1, .7, 1, 1)
@@ -138,4 +138,4 @@ class Unit:
 
 
     def reduce_cooldown(self,fps):
-        self.cooldown_remaining = test_utility.cooldown(self.cooldown_remaining, fps)
+        self.cooldown_remaining = utility.cooldown(self.cooldown_remaining, fps)
