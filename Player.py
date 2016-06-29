@@ -19,3 +19,9 @@ class Player:
         if unit_class in self.my_race.unit_class_list:
             my_unit = unit_class()
             self.unit_list.append(my_unit.name)
+
+    def whether_unit_alive(self):
+        for unit in self.unit_list:
+            if unit.current_hp == 0:
+                self.unit_list.remove(unit)
+
