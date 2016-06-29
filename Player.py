@@ -17,14 +17,9 @@ class Player:
             self.my_race = Orcs()
 
     def create_unit(self,unit_class):
-        print('%s' % unit_class,unit_class)
-        if ('%s' % unit_class) in self.my_race.unit_class_list and self.my_race.check_unit_availablity('%s' % unit_class):
-            my_unit = unit_class()
-            print(my_unit.name)
-            self.unit_list.append(my_unit.name)
-        else:
-            print('wrong')
-
+        my_unit = unit_class()
+        my_unit.owner = self.player_name
+        self.unit_list.append(my_unit.name)
 
     def whether_unit_alive(self):
         for unit in self.unit_list:
