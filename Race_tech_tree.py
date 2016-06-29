@@ -4,7 +4,18 @@ from Troll_Berserker import Troll_berserker
 from Orcs_peon import Peon
 class Humans:
     def __init__(self):
-        self.unit_class_list = [Priest(), Peasant()]
+        self.unit_class_list = [Priest(), Peasant(),]
+        self.unit_availablity = []
+        self.building_availablity = []
+        self.upgrade_availablity = []
+
+    def check_unit_availablity(self,unit_class):
+        pass
+
+
+
+
+
 
 
 class Orcs:

@@ -13,10 +13,10 @@ class Player:
             self.my_race = Humans()
         elif self.race == 'Orcs':
             from Race_tech_tree import Orcs
-            self.my_race = Orcs
+            self.my_race = Orcs()
 
     def create_unit(self,unit_class):
-        if unit_class in self.my_race.unit_class_list:
+        if unit_class in self.my_race.unit_class_list and self.race.check_unit_availablity(unit_class) == True:
             my_unit = unit_class()
             self.unit_list.append(my_unit.name)
 
