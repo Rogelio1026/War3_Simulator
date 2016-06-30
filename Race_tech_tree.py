@@ -1,5 +1,7 @@
 from Priest import Priest
 from Humans_peasant import Peasant
+from Humans_Townhall import HumansTownhall
+from Barracks import Barracks
 from Troll_Berserker import Troll_berserker
 from Orcs_peon import Peon
 class Humans:
@@ -8,12 +10,11 @@ class Humans:
         self.unit_availablity = ['Peasant']
         self.building_availablity = []
         self.upgrade_availablity = []
+        self.start_unit_list = [Peasant,HumansTownhall]
 
     def check_unit_availablity(self,unit_to_check):
         if unit_to_check in self.unit_availablity:
             return True
-
-
 
 
 
