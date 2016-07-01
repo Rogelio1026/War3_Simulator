@@ -12,6 +12,7 @@ class TestStringMethods(unittest.TestCase):
         peasant.back_to_work()
         self.assertEqual(peasant.armor_type, 'medium')
         self.assertEqual(peasant.armor, 0)
+        self.assertEqual(peasant.whether_building, False)
 
 if __name__ == '__main__':
     unittest.main()
