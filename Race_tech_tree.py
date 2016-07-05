@@ -10,7 +10,7 @@ class Humans:
         self.unit_availablity = ['Peasant']
         self.building_availablity = []
         self.upgrade_availablity = []
-        self.start_unit_list = [Peasant,HumansTownhall]
+        self.start_unit_list = []
 
     def initialized_units(self):
         for start_units in self.my_race.start_unit_list:

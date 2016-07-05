@@ -15,10 +15,18 @@ class TestStringMethods(unittest.TestCase):
         player1 = Player('Humans', 'p1')
         player1.create_unit(Peasant)
         print(player1.unit_list)
-        player1.create_unit(Barracks)
 
-    # def
 
+    def test_check_tech_tree_in_townhall(self):
+        townhall = HumansTownhall()
+        print (townhall.check_tech_tree_in_townhall(Peasant))
+
+    def test_creat_unit_in_townhall(self):
+        player1 = Player('Humans', 'p1')
+        townhall = HumansTownhall()
+        townhall.owner = player1
+        townhall.creat_unit_in_townhall(Peasant)
+        print(player1.unit_list,1)
 
 
 
