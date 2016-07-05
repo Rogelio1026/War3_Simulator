@@ -8,6 +8,7 @@ class Player:
         self.player_name = player_name
         self.my_race = None
         self.unit_list = []
+        self.tech_tree_list = []
         self.building_list = []
         self.choose_race()
 
@@ -21,8 +22,9 @@ class Player:
 
     def create_unit(self, unit_class):
         my_unit = unit_class()
-        my_unit.owner = self.player_name
+        my_unit.owner = self
         self.unit_list.append(my_unit.name)
+        self.tech_tree_list.append(my_unit.last_name)
 
     def check_a_building(self,building,unit_class):
         pass

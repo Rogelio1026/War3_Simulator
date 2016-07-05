@@ -4,7 +4,8 @@ class HumansTownhall(Unit):
     def __init__(self):
         Unit.__init__(self,1500,0,'normal','fortified',5,0,0,0,0,'building',None)
         self.unit_availbality_in_townhall = {'Humans_peasant.Peasant':[]}
-        self.name = 'HumansTownhall_' + self.name
+        self.last_name = 'HumansTownhall'
+        self.name = self.last_name + self.name
 
     def check_tech_tree_in_townhall(self,unit):
         """
@@ -17,9 +18,11 @@ class HumansTownhall(Unit):
 
     def creat_unit_in_townhall(self,unit):
         a = self.check_tech_tree_in_townhall(unit)
-        b = self.owner.unit_list
-        if self.owner.unit_list == list(set(a).union(set(b))):
+        b = self.owner.tech_tree_list
+        if b == list(set(a).union(set(b))):
             self.owner.create_unit(unit)
+        else:
+            print('tech tree is locked')
 
 
 
