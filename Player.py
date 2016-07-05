@@ -23,8 +23,6 @@ class Player:
         my_unit = unit_class()
         my_unit.owner = self.player_name
         self.unit_list.append(my_unit.name)
-        # if unit_class.whether_building:
-        #     self.building_list.append(my_unit.name)
 
     def check_a_building(self,building,unit_class):
         pass
