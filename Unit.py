@@ -18,7 +18,7 @@ class Unit:
     def __init__(self, max_hp=1, attack=0, attack_type = 'normal', armor_type='unarmored', armor=0,
                  hp_regeneration_rate=1, cooldown=2, max_mana=0, mana_regeneration_rate=0, position = 'ground',
                  attackable_position=['ground', 'building'], owner='neutral', whether_building=False):
-        self.name = uuid.uuid4()
+        self.name = str(uuid.uuid4())
         self.max_hp = max_hp
         self.attack = attack
         self.attack_type = attack_type
