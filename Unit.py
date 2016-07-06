@@ -19,6 +19,7 @@ class Unit:
                  hp_regeneration_rate=1, cooldown=2, max_mana=0, mana_regeneration_rate=0, position = 'ground',
                  attackable_position=['ground', 'building'], owner='neutral', whether_building=False):
         self.name = str(uuid.uuid4())
+        self.last_name = ''
         self.max_hp = max_hp
         self.attack = attack
         self.attack_type = attack_type

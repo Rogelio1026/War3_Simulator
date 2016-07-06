@@ -15,30 +15,30 @@ class TestStringMethods(unittest.TestCase):
     def test_create_unit(self):
         player1 = Player('Humans', 'p1')
         player1.create_unit(Peasant)
-        print(player1.unit_list)
-        print(player1.tech_tree_list)
+        print(player1.unit_list,1)
+        print(player1.tech_tree_list,2)
 
 
     def test_check_tech_tree_in_townhall(self):
         townhall = HumansTownhall()
-        print (townhall.check_tech_tree_in_townhall(Peasant))
+        print (townhall.check_tech_tree_in_townhall(Peasant),3)
 
     def test_creat_unit_in_townhall(self):
         player1 = Player('Humans', 'p1')
         townhall = HumansTownhall()
         townhall.owner = player1
         townhall.creat_unit_in_townhall(Peasant)
-        print(player1.unit_list)
+        print(player1.unit_list,4)
 
     def test_creat_unit_in_barracks(self):
         player1 = Player('Humans', 'p1')
         barracks = Barracks()
         barracks.owner = player1
-        print(player1.tech_tree_list)
+        print(player1.tech_tree_list,5)
         barracks.creat_unit_in_barracks(Footman)
         player1.tech_tree_list = ['peasant']
         barracks.creat_unit_in_barracks(Footman)
-        print(player1.unit_list)
+        print(player1.unit_list,6)
 
 if __name__ == '__main__':
     unittest.main()

@@ -24,5 +24,16 @@ class HumansTownhall(Unit):
         else:
             print('tech tree is locked')
 
+    def upgrade_to_keep(self):
+        keep = Keep()
+        keep.current_hp = keep.max_hp - self.max_hp + self.current_hp
+        self.owner.upgrade_buildings(self,keep)
+
+class Keep(HumansTownhall):
+    def __init__(self):
+        HumansTownhall.__init__(self)
+        self.last_name = 'keep'
+        self.name = self.last_name + self.name
+        self.max_hp = 2000
 
 

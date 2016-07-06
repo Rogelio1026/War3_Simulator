@@ -36,3 +36,14 @@ class Player:
             if unit.current_hp == 0:
                 self.unit_list.remove(unit)
 
+    def upgrade_buildings(self,building_before,building_after):
+        """
+
+        :param building_before: instance
+        :param building_after:instance
+        :return: upgrade unit_list & tech_tree_list
+        """
+        self.unit_list.append(building_after.name)
+        self.unit_list.remove(building_before.name)
+        self.tech_tree_list.append(building_after.last_name)
+        self.tech_tree_list.remove(building_before.last_name)

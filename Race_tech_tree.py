@@ -12,10 +12,6 @@ class Humans:
         self.upgrade_availablity = []
         self.start_unit_list = []
 
-    def initialized_units(self):
-        for start_units in self.my_race.start_unit_list:
-            self.create_unit(start_units)
-
     def check_tech_tree(self,unit_to_check):
         if unit_to_check in self.unit_availablity:
             return True
