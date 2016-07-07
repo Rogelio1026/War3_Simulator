@@ -5,8 +5,11 @@ class Priest(Unit):
     def __init__(self):
         Unit.__init__(self, 290, 8.5, 'magic', max_mana=200,
                       mana_regeneration_rate=0.667)
+        self.last_name = 'priest'
+        self.name = self.last_name +self.name
         self.heal_cooldown = 1
         self.heal_cooldown_remaining = 0
+        self.time_ralated_functions.append(self.heal_tick)
 
     def heal(self,target):
         if self.heal_cooldown_remaining == 0 and target.alive():
@@ -28,9 +31,6 @@ class Priest(Unit):
     def can_reduce_heal_cooldown(self):
         if self.heal_cooldown_remaining > 0:
             return True
-
-    def tick(self,fps):
-        self.time_ralated_functions.append(self.heal_tick(fps))
 
     def heal_tick(self,fps):
         if self.can_reduce_heal_cooldown():
