@@ -36,4 +36,15 @@ class Keep(HumansTownhall):
         self.name = self.last_name + self.name
         self.max_hp = 2000
 
+    def upgrade_to_castle(self):
+        castle = Castle()
+        castle.current_hp = castle.max_hp - self.max_hp + self.current_hp
+        self.owner.upgrade_buildings(self, castle)
 
+
+class Castle(Keep):
+    def __init__(self):
+        Keep.__init__(self)
+        self.last_name = 'castle'
+        self.name = self.last_name + self.name
+        self.max_hp = 2500
