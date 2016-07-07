@@ -1,10 +1,7 @@
 from Unit import Unit
-from Attack import NormalAttack
 
-
-class Footman(Unit,NormalAttack):
+class Footman(Unit):
     def __init__(self):
-        NormalAttack.__init__(self)
         Unit.__init__(self, 420, 12.5, armor_type='heavy', armor=2,
                       hp_regeneration_rate=1, cooldown=1.35)
         self.last_name = 'footman'
