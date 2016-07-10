@@ -3,7 +3,7 @@ from Unit import Unit
 class Barracks(Unit):
     def __init__(self):
         Unit.__init__(self,1500,0,'normal','fortified',5,0,0,0,0,'building',None)
-        self.unit_availbality_in_barracks = {'Footman.Footman':['peasant'],'Knight.Knight':['castle']}
+        self.unit_availbality_in_barracks = {'Footman.Footman':[],'Knight.Knight':['castle']}
         self.last_name = 'barracks'
         self.name = self.last_name+ self.name
 
