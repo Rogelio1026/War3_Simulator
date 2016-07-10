@@ -19,9 +19,12 @@ class HumansTownhall(Unit):
 
     def creat_unit_in_townhall(self, Unit):
         self.check_tech_tree_in_townhall(Unit)
-        # b = self.owner.tech_tree_list
-        # if b == list(set(a).union(set(b))):
-        self.owner.create_unit(Unit)
+        unit_to_check = self.check_tech_tree_in_townhall(Unit)
+        if all(map(self.check_tech_tree_in_owner,unit_to_check)):
+            self.owner.create_unit(Unit)
+
+    def check_tech_tree_in_owner(self,tech):
+        return tech in self.owner.tech_tree_list
 
     def upgrade_to_keep(self):
         keep = Keep()

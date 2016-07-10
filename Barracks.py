@@ -18,8 +18,8 @@ class Barracks(Unit):
         return self.unit_availbality_in_barracks[unit_str]
 
     def creat_unit_in_barracks(self, Unit):
-        a = self.check_tech_tree_in_barracks(Unit)
-        if all(map(self.check_tech_tree_in_owner,a)):
+        unit_to_check = self.check_tech_tree_in_barracks(Unit)
+        if all(map(self.check_tech_tree_in_owner,unit_to_check)):
             self.owner.create_unit(Unit)
         else:
             print('This tech is locked')
