@@ -18,7 +18,6 @@ class HumansTownhall(Unit):
         return self.unit_availbality_in_townhall[unit_str]
 
     def creat_unit_in_townhall(self, Unit):
-        self.check_tech_tree_in_townhall(Unit)
         unit_to_check = self.check_tech_tree_in_townhall(Unit)
         if all(map(self.check_tech_tree_in_owner,unit_to_check)):
             self.owner.create_unit(Unit)

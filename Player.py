@@ -10,6 +10,10 @@ class Player:
         self.unit_list = []
         self.tech_tree_list = []
         self.building_list = []
+        self.melee_attack_l1 = False
+        self.melee_attack_l2 = False
+        self.melee_attack_l3 = False
+        self.unit_upgrade_group = {'melee_attack_l1':self.melee_attack_l1,'melee_attack_l2':self.melee_attack_l2,'melee_attack_l3':self.melee_attack_l3}
         self.choose_race()
 
     def choose_race(self):
@@ -47,3 +51,7 @@ class Player:
         self.unit_list.remove(building_before.name)
         self.tech_tree_list.append(building_after.last_name)
         self.tech_tree_list.remove(building_before.last_name)
+
+    def upgrade_tech(self,upgrades):
+        tech_to_upgrade = upgrades
+        self.tech_to_upgrade = True
