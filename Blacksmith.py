@@ -16,7 +16,7 @@ class Blacksmith(Unit):
         """
         return self.upgrades_availbality_in_blacksmith[upgrades]
 
-    def upgrade_in_black_smith(self,upgrades):
+    def upgrade_in_blacksmith(self,upgrades):
         upgrade_to_check = self.check_tech_tree_in_blacksmith(upgrades)
         if all(map(self.check_tech_tree_in_owner,upgrade_to_check)):
             self.owner.upgrade_tech(upgrades)

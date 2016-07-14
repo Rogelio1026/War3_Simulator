@@ -2,7 +2,7 @@ import unittest
 from Player import Player
 from Humans_peasant import Peasant
 from Blacksmith import Blacksmith
-from Humans_Townhall import HumansTownhall,Castle
+from Humans_Townhall import HumansTownhall,Keep,Castle
 
 class TestStringMethods(unittest.TestCase):
 
@@ -14,7 +14,11 @@ class TestStringMethods(unittest.TestCase):
         player1 = Player('Humans', 'p1')
         blacksmith = Blacksmith()
         blacksmith.owner = player1
-        blacksmith.upgrade_in_black_smith('melee_attack_l2')
+        blacksmith.upgrade_in_blacksmith('melee_attack_l2')
+        self.assertEqual(player1.unit_upgrade_group['melee_attack_l2'], False)
+        player1.create_unit(Keep)
+        blacksmith.upgrade_in_blacksmith('melee_attack_l2')
+        self.assertEqual(player1.unit_upgrade_group['melee_attack_l2'],True)
 
 if __name__ == '__main__':
     unittest.main()
