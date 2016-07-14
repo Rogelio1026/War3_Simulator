@@ -63,6 +63,11 @@ class TestStringMethods(unittest.TestCase):
             list.append(unit[:6])
         self.assertEqual(list, ['footma','peasan','castle','knight'])
 
+    def test_upgrade_tech(self):
+        player1 = Player('Humans', 'p1')
+        player1.upgrade_tech('melee_attack_l2')
+        self.assertEqual(player1.unit_upgrade_group['melee_attack_l2'], True)
+
 
 if __name__ == '__main__':
     unittest.main()
