@@ -24,6 +24,7 @@ class TestStringMethods(unittest.TestCase):
             list.append(unit[:7])
         self.assertEqual(list,['peasant'])
         self.assertEqual(player1.tech_tree_list,['peasant'])
+        print(player1.unit_instance)
 
     def test_check_tech_tree_in_townhall(self):
         townhall = HumansTownhall()

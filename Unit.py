@@ -40,6 +40,7 @@ class Unit:
         self.time_ralated_functions = [self.hp_regenerate,self.mana_regenerate,self.reduce_cooldown]
         self.owner = owner
         self.whether_building = whether_building
+        self.stats_upgrade_list = {}
 
     def tick(self,fps):
         """
@@ -141,3 +142,7 @@ class Unit:
 
     def reduce_cooldown(self,fps):
         self.cooldown_remaining = utility.cooldown(self.cooldown_remaining, fps)
+
+    def receive_upgrade(self,tech_to_upgrade):
+        if tech_to_upgrade in self.stats_upgrade_list:
+            self.stats_upgrade_list[tech_to_upgrade]

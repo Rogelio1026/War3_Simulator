@@ -9,7 +9,7 @@ class Player:
         self.my_race = None
         self.unit_list = []
         self.tech_tree_list = []
-        self.building_list = []
+        self.unit_instance = []
         self.unit_upgrade_group = {'melee_attack_l1':False,'melee_attack_l2':False,'melee_attack_l3':False}
         self.choose_race()
 
@@ -26,6 +26,7 @@ class Player:
         my_unit.owner = self
         self.unit_list.append(my_unit.name)
         self.tech_tree_list.append(my_unit.last_name)
+        self.unit_instance.append(my_unit)
 
     def check_a_building(self,building,unit_class):
         pass
@@ -49,8 +50,12 @@ class Player:
         self.tech_tree_list.append(building_after.last_name)
         self.tech_tree_list.remove(building_before.last_name)
 
-    def upgrade_tech(self,upgrades):
+    def mark_upgrade_tech(self,upgrades):
         # self.upgrade = True
         # getattr(self,upgrades)
         # a = True
         self.unit_upgrade_group[upgrades] = True
+
+    def upgrade_in_unit(self,tech_to_upgrade):
+        for unit in self.unit_instance:
+            unit.receive_upgrade(tech_to_upgrade)

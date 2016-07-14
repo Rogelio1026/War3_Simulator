@@ -19,18 +19,9 @@ class Blacksmith(Unit):
     def upgrade_in_blacksmith(self,upgrades):
         upgrade_to_check = self.check_tech_tree_in_blacksmith(upgrades)
         if all(map(self.check_tech_tree_in_owner,upgrade_to_check)):
-            self.owner.upgrade_tech(upgrades)
+            self.owner.mark_upgrade_tech(upgrades)
+            self.owner.upgrade_in_unit(upgrades)
+
 
     def check_tech_tree_in_owner(self,tech):
         return tech in self.owner.tech_tree_list
-
-    def upgrade_iron_forged_swords(self):
-        self.owner.whether_iron_forged_swords = True
-
-    def upgrade_steel_forged_swords(self):
-        if self.owner.whether_iron_forged_swords == True and self.check_tech_tree_in_blacksmith:
-            self.owner.whether_steel_forged_swords = True
-
-    def upgrade_mithril_forged_swords(self):
-        if self.owner.whether_steel_forged_swords == True:
-            self.owner.whether_mithril_forged_swords = True
