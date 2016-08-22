@@ -15,9 +15,12 @@ attack_type = {'normal': normal_attack, 'pierce': pierce_attack, 'siege': siege_
 
 
 class Unit:
-    def __init__(self, max_hp=1, attack=0, attack_type = 'normal', armor_type='unarmored', armor=0,
-                 hp_regeneration_rate=1, cooldown=2, max_mana=0, mana_regeneration_rate=0, position = 'ground',
-                 attackable_position=['ground', 'building'], owner='neutral', whether_building=False):
+    def __init__(self, max_hp=1, attack=0, attack_type='normal', armor_type='unarmored', armor=0,
+                 hp_regeneration_rate=1, cooldown=2, max_mana=0, mana_regeneration_rate=0, position='ground',
+                 attackable_position=['ground', 'building'], owner='neutral', whether_building=False,
+                 attack_stats=None):
+        if attack_stats is None:
+            attack_stats = {"groud_attack": 1}
         self.name = str(uuid.uuid4())
         self.last_name = ''
         self.max_hp = max_hp
@@ -37,12 +40,13 @@ class Unit:
         self.air_attack = 0
         self.air_attack_cooldown = 0
         self.air_attack_type = None
-        self.time_ralated_functions = [self.hp_regenerate,self.mana_regenerate,self.reduce_cooldown]
+        self.time_ralated_functions = [self.hp_regenerate, self.mana_regenerate, self.reduce_cooldown]
         self.owner = owner
         self.whether_building = whether_building
         self.stats_upgrade_list = {}
+        self.ground_attack = attack_stats["ground_attack"]
 
-    def tick(self,fps):
+    def tick(self, fps):
         """
         This function is called whenever time changed
         :return: function
@@ -50,7 +54,7 @@ class Unit:
         for functions in self.time_ralated_functions:
             functions(fps)
 
-    def spell_clock(self,fps):
+    def spell_clock(self, fps):
         pass
 
     def launch_attack(self, enemy):
@@ -76,7 +80,7 @@ class Unit:
         :param underattack_type: is str
         :return:current hp
         """
-        damage_change = Unit.damage_change_lookup(self,underattack_type,self.armor_type)
+        damage_change = Unit.damage_change_lookup(self, underattack_type, self.armor_type)
         damage_soak = Unit.damage_soak(self.armor)
         self.current_hp = self.current_hp - damage * damage_change * damage_soak
         if self.current_hp <= 0:
@@ -116,16 +120,15 @@ class Unit:
     def can_regenerate_hp(self):
         return 0 < self.current_hp and self.current_hp < self.max_hp
 
-
     def hp_regenerate(self, fps):
         """
 
         :return:current_hp
         """
         if self.can_regenerate_hp():
-             self.current_hp += self.hp_regeneration_rate / fps
-             if self.current_hp > self.max_hp:
-                    self.current_hp = self.max_hp
+            self.current_hp += self.hp_regeneration_rate / fps
+            if self.current_hp > self.max_hp:
+                self.current_hp = self.max_hp
 
     def can_regenerate_mana(self):
         return 0 < self.max_mana and self.current_mana < self.max_mana
@@ -139,10 +142,9 @@ class Unit:
     def alive(self):
         return self.current_hp > 0
 
-
-    def reduce_cooldown(self,fps):
+    def reduce_cooldown(self, fps):
         self.cooldown_remaining = utility.cooldown(self.cooldown_remaining, fps)
 
-    def receive_upgrade(self,tech_to_upgrade):
+    def receive_upgrade(self, tech_to_upgrade):
         if tech_to_upgrade in self.stats_upgrade_list:
             self.stats_upgrade_list[tech_to_upgrade]
