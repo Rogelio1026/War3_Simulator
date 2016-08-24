@@ -15,36 +15,67 @@ attack_type = {'normal': normal_attack, 'pierce': pierce_attack, 'siege': siege_
 
 
 class Unit:
-    def __init__(self, max_hp=1, attack=0, attack_type='normal', armor_type='unarmored', armor=0,
-                 hp_regeneration_rate=1, cooldown=2, max_mana=0, mana_regeneration_rate=0, position='ground',
-                 attackable_position=['ground', 'building'], owner='neutral', whether_building=False,
-                 attack_stats=None):
+    # def __init__(self, max_hp=1, attack=0, attack_type='normal', armor_type='unarmored', armor=0,
+    #              hp_regeneration_rate=1, cooldown=2, max_mana=0, mana_regeneration_rate=0, position='ground',
+    #              attackable_position=['ground', 'building'], owner='neutral', whether_building=False,
+    #              attack_stats=None):
+    #     if attack_stats is None:
+    #         attack_stats = {"groud_attack": 1}
+    #     self.name = str(uuid.uuid4())
+    #     self.last_name = ''
+    #     self.max_hp = max_hp
+    #     self.attack = attack
+    #     self.attack_type = attack_type
+    #     self.armor_type = armor_type
+    #     self.armor = armor
+    #     self.current_hp = max_hp
+    #     self.hp_regeneration_rate = hp_regeneration_rate
+    #     self.cooldown = cooldown
+    #     self.cooldown_remaining = 0
+    #     self.max_mana = max_mana
+    #     self.current_mana = max_mana
+    #     self.mana_regeneration_rate = mana_regeneration_rate
+    #     self.position = position
+    #     self.attackable_position = attackable_position
+    #     self.air_attack = 0
+    #     self.air_attack_cooldown = 0
+    #     self.air_attack_type = None
+    #     self.time_ralated_functions = [self.hp_regenerate, self.mana_regenerate, self.reduce_cooldown]
+    #     self.owner = owner
+    #     self.whether_building = whether_building
+    #     self.stats_upgrade_list = {}
+    def __init__(self, general_stats=None, attack_stats=None, armor_stats=None, hp_mp_stats=None):
+        if general_stats is None:
+            general_stats = {"name": str(uuid.uuid4()),"last_name":'',"owner":'neutral'}
         if attack_stats is None:
-            attack_stats = {"groud_attack": 1}
-        self.name = str(uuid.uuid4())
-        self.last_name = ''
-        self.max_hp = max_hp
-        self.attack = attack
-        self.attack_type = attack_type
-        self.armor_type = armor_type
-        self.armor = armor
-        self.current_hp = max_hp
-        self.hp_regeneration_rate = hp_regeneration_rate
-        self.cooldown = cooldown
+            attack_stats = {"attack":0,"attack_type":'normal',"attack_cooldown":2,"air_attack":0,
+                            "air_attack_type":None,"air_attack_cooldown":2,"attackable_position":['ground','building']}
+        if armor_stats is None:
+            armor_stats = {"armor":0,"armor_type":'unarmored',"position":'ground'}
+        if hp_mp_stats is None:
+            hp_mp_stats = {"max_hp":1,"hp_regeneration_rate":1,"max_mana":0,"mana_regeneration_rate":0}
+        self.name = general_stats["name"]
+        self.last_name = general_stats["last_name"]
+        self.max_hp = hp_mp_stats["max_hp"]
+        self.attack = attack_stats["attack"]
+        self.attack_type = attack_stats["attack_type"]
+        self.armor_type = armor_stats["armor_type"]
+        self.armor = armor_stats["armor"]
+        self.current_hp = hp_mp_stats["max_hp"]
+        self.hp_regeneration_rate = hp_mp_stats["hp_regeneration_rate"]
+        self.cooldown = attack_stats["attack_cooldown"]
         self.cooldown_remaining = 0
-        self.max_mana = max_mana
-        self.current_mana = max_mana
-        self.mana_regeneration_rate = mana_regeneration_rate
-        self.position = position
-        self.attackable_position = attackable_position
+        self.max_mana = hp_mp_stats["max_mana"]
+        self.current_mana = hp_mp_stats["max_mana"]
+        self.mana_regeneration_rate = hp_mp_stats["mana_regeneration_rate"]
+        self.position = armor_stats["position"]
+        self.attackable_position = attack_stats["attackable_position"]
         self.air_attack = 0
         self.air_attack_cooldown = 0
         self.air_attack_type = None
         self.time_ralated_functions = [self.hp_regenerate, self.mana_regenerate, self.reduce_cooldown]
-        self.owner = owner
-        self.whether_building = whether_building
+        self.owner = general_stats["owner"]
         self.stats_upgrade_list = {}
-        self.ground_attack = attack_stats["ground_attack"]
 
     def tick(self, fps):
         """
